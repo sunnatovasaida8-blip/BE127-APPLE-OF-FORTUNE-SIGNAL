@@ -1,0 +1,220 @@
+body {
+  background-color: #0b0f19;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 15px;
+}
+
+.app-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #141b2d;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #232e47;
+}
+
+.promo-title {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #a0aec0;
+}
+
+.promo-box {
+  background: #1a233a;
+  border: 2px dashed #00e676;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+#promo-code {
+  font-size: 22px;
+  font-weight: bold;
+  color: #00e676;
+  display: block;
+}
+
+.toast {
+  color: #00e676;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 12px;
+  color: #cbd5e0;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #2d3748;
+  background: #0f172a;
+  color: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.error-text {
+  color: #ff5252;
+  font-size: 11px;
+  margin-top: 4px;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+#entry-btn {
+  width: 100%;
+  padding: 14px;
+  background: #00e676;
+  color: #000;
+  font-size: 16px;
+}
+
+#entry-btn:disabled {
+  background: #4a5568;
+  color: #718096;
+}
+
+.hidden { display: none !important; }
+
+/* Header */
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.exit-btn {
+  background: #ff5252;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+/* Selector */
+.game-selector {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.game-selector button {
+  flex: 1;
+  padding: 8px 4px;
+  background: #1f293d;
+  color: #fff;
+  font-size: 12px;
+}
+
+.game-selector button.active-btn {
+  background: #00e676;
+  color: #000;
+}
+
+/* Grids */
+.game-board {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.coeff-list {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  font-weight: bold;
+  color: #00e676;
+}
+
+.grid-apple {
+  display: grid;
+  grid-template-columns: repeat(5, 45px);
+  gap: 8px;
+}
+
+.apple-cell {
+  width: 45px;
+  height: 45px;
+  background: #5c3a21;
+  border-radius: 50%;
+  border: 2px solid #3d2412;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.cell-active { background: #00e676 !important; }
+
+/* Mines & Swamp */
+.grid-mines, .grid-swamp {
+  display: grid;
+  grid-template-columns: repeat(5, 48px);
+  gap: 8px;
+  background: #002b49;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #00aaff;
+}
+
+.cell-square {
+  width: 48px;
+  height: 48px;
+  background: #091526;
+  border: 1px solid #1a3d6d;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/* Control Buttons */
+.controls-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-start {
+  width: 100%;
+  padding: 14px;
+  background: #00e676;
+  color: #000;
+  font-size: 16px;
+}
+
+.nav-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btns button {
+  flex: 1;
+  padding: 12px;
+  background: #00aaff;
+  color: #fff;
+  font-size: 13px;
+}
