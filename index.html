@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linebet Signals</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- 1-BOSQICH: ID KIRITISH VA PROMOKOD -->
+    <div id="login-screen" class="card">
+      <h2>🎰 LINEBET SIGNALS</h2>
+      <p class="promo-title">Roʻyxatdan oʻtish uchun promokod:</p>
+      <div class="promo-box" onclick="copyPromo()">
+        <span id="promo-code">BE127</span>
+        <small>📋 (Nusxalash uchun bosing)</small>
+      </div>
+      <div id="copy-toast" class="toast hidden">Promokod nusxalandi!</div>
+
+      <div class="input-group">
+        <label for="user-id">LINEBET ID kiriting (10 xonali):</label>
+        <input type="number" id="user-id" placeholder="Masalan: 1234567890" oninput="validateID()">
+        <span id="id-error" class="error-text hidden">ID genau 10 ta raqamdan iborat boʻlishi kerak!</span>
+      </div>
+
+      <button id="entry-btn" onclick="enterApp()" disabled>KIRISH</button>
+    </div>
+
+    <!-- 2-BOSQICH: O'YINLAR MENYUSI VA SIGNALLAR -->
+    <div id="main-screen" class="card hidden">
+      <div class="header-info">
+        <span>ID: <strong id="display-id"></strong></span>
+        <button class="exit-btn" onclick="logout()">Chiqish</button>
+      </div>
+
+      <div class="game-selector">
+        <button id="btn-apple" onclick="switchGame('apple')" class="active-btn">Apple of Fortune</button>
+        <button id="btn-mines" onclick="switchGame('mines')">Mines</button>
+        <button id="btn-swamp" onclick="switchGame('swamp')">Swamp Land</button>
+      </div>
+
+      <!-- APPLE OF FORTUNE -->
+      <div id="apple-game" class="game-board">
+        <div class="coeff-list">
+          <div>x2.41</div>
+          <div>x1.93</div>
+          <div>x1.54</div>
+          <div>x1.23</div>
+        </div>
+        <div class="grid-apple" id="apple-grid"></div>
+      </div>
+
+      <!-- MINES -->
+      <div id="mines-game" class="game-board hidden">
+        <div class="grid-mines" id="mines-grid"></div>
+      </div>
+
+      <!-- SWAMP LAND -->
+      <div id="swamp-game" class="game-board hidden">
+        <div class="grid-swamp" id="swamp-grid"></div>
+      </div>
+
+      <!-- TUGMALAR -->
+      <div id="apple-controls" class="controls-group">
+        <button class="btn-start" onclick="appleStart()">START</button>
+        <div class="nav-btns">
+          <button onclick="applePrevRow()">OLDINGI QATOR</button>
+          <button onclick="appleNextRow()">KEYINGI QATOR</button>
+        </div>
+      </div>
+
+      <div id="general-controls" class="controls-group hidden">
+        <button class="btn-start" onclick="generateGeneralSignal()">SIGNAL OLISH</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
